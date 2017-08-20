@@ -23,7 +23,7 @@ class Phish(create.Create):
  def apache(self):
   cmd = ['service','apache2','restart']
   subprocess.Popen(cmd).wait()
-
+  print '\n[-] Started apache web server'
  def permission(self):
   cmd = ['chmod','777','-R',self.dir]
   subprocess.Popen(cmd).wait()
